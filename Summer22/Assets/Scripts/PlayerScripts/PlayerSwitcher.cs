@@ -13,6 +13,7 @@ public class PlayerSwitcher : MonoBehaviour
         foreach (GameObject player in players)
         {
             player.GetComponent<PlayerMovement>().enabled=false;
+            //player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyContraints.FreezeRotationZ;
         }
         players[0].GetComponent<PlayerMovement>().enabled=true;//enable the first one
     }
@@ -24,6 +25,7 @@ public class PlayerSwitcher : MonoBehaviour
         {
             //disable current player
             players[playerIndex].GetComponent<PlayerMovement>().enabled = false;
+            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyContraints.FreezeRotationZ;
             if (playerIndex == players.Count - 1)
             {
                 playerIndex = 0;
@@ -34,6 +36,7 @@ public class PlayerSwitcher : MonoBehaviour
             }
             //enable new player
             players[playerIndex].GetComponent<PlayerMovement>().enabled = true;
+            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints.FreezeRotationZ;
         }
     }
 }
