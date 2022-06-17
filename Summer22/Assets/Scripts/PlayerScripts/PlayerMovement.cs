@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpPower = 3.5f;
 
     public Rigidbody2D rb;
-    
+    public winHandle wh;
     void Start()
     {
         
@@ -37,6 +37,22 @@ public class PlayerMovement : MonoBehaviour
         {
             //rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col){
+        if (col.gameObject.name == "Goal") {
+            wh.currentPlayers++;
+            if(wh.currentPlayers == wh.playersNeeded)
+            {
+                wh.handleWin();
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col){
+        if (col.gameObject.name == "Goal") {
+            wh.currentPlayers--;
         }
     }
 }
