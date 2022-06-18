@@ -14,9 +14,11 @@ public class PlayerSwitcher : MonoBehaviour
         {
             player.GetComponent<PlayerMovement>().enabled=false;
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            player.layer = LayerMask.NameToLayer("Player");
         }
         players[0].GetComponent<PlayerMovement>().enabled=true;//enable the first one
         players[0].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        players[0].layer = LayerMask.NameToLayer("Default");
     }
 
     // Update is called once per frame
@@ -27,6 +29,8 @@ public class PlayerSwitcher : MonoBehaviour
             //disable current player
             players[playerIndex].GetComponent<PlayerMovement>().enabled = false;
             players[playerIndex].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            players[playerIndex].layer = LayerMask.NameToLayer("Player");
+
             if (playerIndex == players.Count - 1)
             {
                 playerIndex = 0;
@@ -38,6 +42,8 @@ public class PlayerSwitcher : MonoBehaviour
             //enable new player
             players[playerIndex].GetComponent<PlayerMovement>().enabled = true;
             players[playerIndex].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            
+            players[playerIndex].layer = LayerMask.NameToLayer("Default");
             //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotationZ;
         }
     }
