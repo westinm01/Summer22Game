@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8106081574118183175}
   - component: {fileID: 8106081574118183168}
   - component: {fileID: 8106081574118183172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,6 +144,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd705e4881e4624eb3b36989c8e87c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
   movementSpeed: 3.5
   jumpPower: 7
+  gc: {fileID: 0}
   rb: {fileID: 8106081574118183168}
+  wh: {fileID: 0}
+  boxCollider2D: {fileID: 8106081574118183175}

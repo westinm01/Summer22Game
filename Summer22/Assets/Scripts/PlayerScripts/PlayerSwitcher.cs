@@ -16,7 +16,7 @@ public class PlayerSwitcher : MonoBehaviour
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             player.layer = LayerMask.NameToLayer("Player");
         }
-        players[0].GetComponent<PlayerMovement>().enabled=true;//enable the first one
+        players[0].GetComponent<PlayerMovement>().enabled=true;//enable the first player
         players[0].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         players[0].layer = LayerMask.NameToLayer("Default");
     }
@@ -44,7 +44,6 @@ public class PlayerSwitcher : MonoBehaviour
             players[playerIndex].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             
             players[playerIndex].layer = LayerMask.NameToLayer("Default");
-            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotationZ;
         }
     }
 }

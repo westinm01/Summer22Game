@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public winHandle wh;
     public BoxCollider2D boxCollider2D;
 
+    public bool isCollecting = false;
     
     void Start()
     {
@@ -45,17 +46,17 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.name == "Goal") {
-            wh.currentPlayers++;
-            if(wh.currentPlayers == wh.playersNeeded)
-            {
-                wh.handleWin();
-            }
+            wh.incrementPlayers();
+        }
+        else if (col.gameObject.name == "Collectible"){
+            wh.incrementCollectibles();
+            Destroy(col.gameObject);
         }
     }
 
     void OnTriggerExit2D(Collider2D col){
         if (col.gameObject.name == "Goal") {
-            wh.currentPlayers--;
+            wh.decrementPlayers();
         }
     }
 
