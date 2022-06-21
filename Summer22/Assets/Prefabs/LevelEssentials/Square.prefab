@@ -156,3 +156,4 @@ MonoBehaviour:
   rb: {fileID: 8106081574118183168}
   wh: {fileID: 0}
   boxCollider2D: {fileID: 8106081574118183175}
+  isCollecting: 0

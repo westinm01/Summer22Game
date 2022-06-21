@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.name == "Goal") {
             wh.incrementPlayers();
         }
-        else if (col.gameObject.name == "Collectible"){
+        else if (col.gameObject.tag == "Collectible"){
             wh.incrementCollectibles();
             Destroy(col.gameObject);
         }

@@ -10,6 +10,8 @@ public class winHandle : MonoBehaviour
     public int currentPlayers=0;
     public int currentCollectibles = 0;
 
+    public CollectDisplay collectDisplay;
+
     void Start(){
         //count how many collectibles are in the scene.
     }
@@ -30,6 +32,7 @@ public class winHandle : MonoBehaviour
 
     public void incrementCollectibles(){
         currentCollectibles++;
+        collectDisplay.reduceCollectibles();
         checkWin();
     }
 
