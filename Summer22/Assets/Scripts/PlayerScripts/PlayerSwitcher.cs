@@ -18,7 +18,7 @@ public class PlayerSwitcher : MonoBehaviour
         }
         players[0].GetComponent<PlayerMovement>().enabled=true;//enable the first player
         players[0].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-        players[0].layer = LayerMask.NameToLayer("Default");
+        players[0].layer = LayerMask.NameToLayer("CurrentPlayer");
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class PlayerSwitcher : MonoBehaviour
             players[playerIndex].GetComponent<PlayerMovement>().enabled = true;
             players[playerIndex].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             
-            players[playerIndex].layer = LayerMask.NameToLayer("Default");
+            players[playerIndex].layer = LayerMask.NameToLayer("CurrentPlayer");
         }
     }
 }

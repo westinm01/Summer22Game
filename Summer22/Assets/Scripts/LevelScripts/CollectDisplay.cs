@@ -21,7 +21,7 @@ public class CollectDisplay : MonoBehaviour
     {
         collectibleNum--;
         tmp.SetText(collectibleNum.ToString());
-
+        //actually deleting a collectible can be found in PlayerMovement
     }
 
 

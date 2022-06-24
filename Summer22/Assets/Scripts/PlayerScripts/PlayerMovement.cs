@@ -52,6 +52,17 @@ public class PlayerMovement : MonoBehaviour
             wh.incrementCollectibles();
             Destroy(col.gameObject);
         }
+        else if (col.gameObject.tag == "HeavyButton")
+        {
+            HeavyButton hb = col.gameObject.GetComponent<HeavyButton>();
+            if(hb.requiredHeight <= this.transform.localScale.y)
+            {
+                Debug.Log(this.transform.localScale.y);
+                hb.actions.Invoke();
+                hb.Disappear();
+            }
+            
+        }
     }
 
     void OnTriggerExit2D(Collider2D col){
