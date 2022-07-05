@@ -44,14 +44,14 @@ public class MovingPlatform : MonoBehaviour
 
     void onColliderEnter2D(Collider2D col)
     {
-        if(col.gameObject.layer == 7)
+        if(col.gameObject.layer == 7 || col.gameObject.layer == 8)
         {
             col.gameObject.transform.parent = transform;//Assigns this platform as the parent
         }
     }
 
     void onColliderExit2D(Collider2D col){
-        if(col.gameObject.layer == 7)
+        if(col.gameObject.layer == 7 || col.gameObject.layer == 8)
         {
             col.gameObject.transform.parent = null;//Unassigns this platform as the parent
         }

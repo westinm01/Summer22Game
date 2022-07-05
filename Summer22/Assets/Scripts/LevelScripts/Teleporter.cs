@@ -26,7 +26,8 @@ public class Teleporter : MonoBehaviour
         if(!disableTeleport)
         {
             otherTeleporter.disableTeleport = true;
-            col.transform.position = new Vector3(parentObject.transform.position.x, parentObject.gameObject.transform.position.y+1, parentObject.gameObject.transform.position.z);
+            col.transform.position = new Vector3(parentObject.transform.position.x, parentObject.gameObject.transform.position.y + 1, col.gameObject.transform.position.z);
+            //move x and y but preserve z
         }
         
     }
