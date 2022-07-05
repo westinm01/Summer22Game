@@ -42,7 +42,7 @@ public class MovingPlatform : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
     }
 
-    void onTriggerEnter2D(Collider2D col)
+    void onColliderEnter2D(Collider2D col)
     {
         if(col.gameObject.layer == 7)
         {
@@ -50,7 +50,7 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    void onTriggerExit2D(Collider2D col){
+    void onColliderExit2D(Collider2D col){
         if(col.gameObject.layer == 7)
         {
             col.gameObject.transform.parent = null;//Unassigns this platform as the parent
