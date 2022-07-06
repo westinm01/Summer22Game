@@ -12,10 +12,14 @@ public class HeavyButton : MonoBehaviour
     private bool isPressed = false;
     public float timerToFall = 1f;
     private float timer=0;
-    private GameObject p;
+    private GameObject p;//parent
+
+    private bool pressCheck = true;// checks if this is the first frame after the button pressed.
+    private AudioSource pressSound;
 
     void Start(){
         p = transform.parent.gameObject;
+        pressSound = GetComponent<AudioSource>();
     }
 /* Wasn't working... Moved functionality to PlayerMovement
     void onCollisionEnter2D(Collider2D col){
@@ -39,6 +43,11 @@ public class HeavyButton : MonoBehaviour
     void Update(){
         if(isPressed)
         {
+            if(pressCheck)
+            {
+                pressSound.Play();
+            }
+            pressCheck=false;
             timer+= Time.deltaTime;
             if(timer>=timerToFall)
             {
