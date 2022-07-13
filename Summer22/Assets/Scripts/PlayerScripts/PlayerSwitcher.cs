@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerSwitcher : MonoBehaviour
 {
 
     public List<GameObject> players;
     private int playerIndex = 0;
+    public Image currentPlayerDisplay;
     
     void Start()
     {
@@ -19,6 +21,8 @@ public class PlayerSwitcher : MonoBehaviour
         players[0].GetComponent<PlayerMovement>().enabled=true;//enable the first player
         players[0].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         players[0].layer = LayerMask.NameToLayer("CurrentPlayer");
+
+        updateCurrentPlayerDisplay();
     }
 
     // Update is called once per frame
@@ -44,6 +48,21 @@ public class PlayerSwitcher : MonoBehaviour
             players[playerIndex].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             
             players[playerIndex].layer = LayerMask.NameToLayer("CurrentPlayer");
+            
+            updateCurrentPlayerDisplay();
         }
+    }
+
+    public int getPlayerIndex()
+    {
+        return playerIndex;
+    }
+
+    private void updateCurrentPlayerDisplay()
+    {
+        SpriteRenderer currentSR =players[playerIndex].GetComponent<SpriteRenderer>();
+        currentPlayerDisplay.sprite = currentSR.sprite;
+        currentPlayerDisplay.color = currentSR.color;
+        currentPlayerDisplay.gameObject.transform.localScale = currentSR.gameObject.transform.localScale;
     }
 }
