@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class winHandle : MonoBehaviour
 {
@@ -12,13 +12,16 @@ public class winHandle : MonoBehaviour
 
     public CollectDisplay collectDisplay;
 
+    public PauseManager pauseManager;
+
     void Start(){
         //count how many collectibles are in the scene.
     }
     
     public void handleWin()
     {
-        SceneManager.LoadScene("Main Menu"); //instead, should go to win screen!
+        //SceneManager.LoadScene("Main Menu"); //instead, should go to win screen!
+        pauseManager.Pause(1); //pause game and load up win screen
     }
 
     public void incrementPlayers(){
