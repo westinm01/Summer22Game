@@ -14,4 +14,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelect");
     }
+    public void LoadSceneByName(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 }
