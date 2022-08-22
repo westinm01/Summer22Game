@@ -11,11 +11,13 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
         Time.timeScale = 1.0f;
     }
+
     public void LoadLevelSelect()
     {
         SceneManager.LoadScene("LevelSelect");
         Time.timeScale = 1.0f;
     }
+    
     public void LoadSceneByName(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
