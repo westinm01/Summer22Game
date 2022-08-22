@@ -2020,7 +2020,7 @@ PrefabInstance:
       objectReference: {fileID: 1038716588}
     - target: {fileID: 8321511356799915784, guid: 945ade56956a8f14ab9617f4acf4e6aa, type: 3}
       propertyPath: duration
-      value: 2
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 8321511356799915785, guid: 945ade56956a8f14ab9617f4acf4e6aa, type: 3}
       propertyPath: m_RootOrder
