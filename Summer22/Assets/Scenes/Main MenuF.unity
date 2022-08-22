@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 29165126}
   - component: {fileID: 29165127}
   m_Layer: 5
-  m_Name: VolumeSlider
+  m_Name: volumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1622,7 +1622,7 @@ GameObject:
   - component: {fileID: 679117681}
   - component: {fileID: 679117680}
   m_Layer: 5
-  m_Name: ResolutionDropdown
+  m_Name: resolutionDropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,7 +1761,7 @@ GameObject:
   - component: {fileID: 726309860}
   - component: {fileID: 726309859}
   m_Layer: 5
-  m_Name: GraphicsDropdown
+  m_Name: graphicsDropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3632,7 +3632,7 @@ GameObject:
   - component: {fileID: 1659274221}
   - component: {fileID: 1659274222}
   m_Layer: 5
-  m_Name: FullscreenToggle
+  m_Name: fullscreenToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
