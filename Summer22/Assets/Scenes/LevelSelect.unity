@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 349415199}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1656,6 +1656,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: cb79ae4d3ec4a22449e2b08cfbf7859c, type: 3}
+    - target: {fileID: 456292311, guid: 945ade56956a8f14ab9617f4acf4e6aa, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 8ba246b62956c414ebcd6ef42e2a7b34, type: 2}
     - target: {fileID: 8321511356799915784, guid: 945ade56956a8f14ab9617f4acf4e6aa, type: 3}
       propertyPath: cam
       value: 
@@ -1855,7 +1859,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 263094545}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42944273
+  m_Size: 0.4294428
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
