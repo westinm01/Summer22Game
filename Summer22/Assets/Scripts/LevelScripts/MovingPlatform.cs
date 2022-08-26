@@ -48,6 +48,8 @@ public class MovingPlatform : MonoBehaviour
         {
             col.gameObject.transform.parent = transform;//Assigns this platform as the parent
         }
+
+        
     }
 
     void onColliderExit2D(Collider2D col){
@@ -55,6 +57,25 @@ public class MovingPlatform : MonoBehaviour
         {
             col.gameObject.transform.parent = null;//Unassigns this platform as the parent
         }
+
+       
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+
+        if (col.gameObject.CompareTag("Player"))
+        {
+
+            col.gameObject.transform.SetParent(gameObject.transform);
+
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        col.gameObject.transform.parent = null;
     }
 
     private void OnDrawGizmos()
