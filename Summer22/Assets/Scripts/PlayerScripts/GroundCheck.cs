@@ -28,4 +28,5 @@ public class GroundCheck : MonoBehaviour
             isGrounded = false;
         }
     }
+    
 }

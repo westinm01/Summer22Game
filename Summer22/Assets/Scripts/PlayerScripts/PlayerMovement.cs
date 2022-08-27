@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
     public BoxCollider2D boxCollider2D;
 
     public bool isCollecting = false;
+
+    float upSpeed;
+    public float bounceLimit = 600;
     
     void Start()
     {
@@ -41,7 +44,14 @@ public class PlayerMovement : MonoBehaviour
         {
             
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            
         }
+        if (gc.isGrounded)
+        {
+            upSpeed = 0f;
+            print("Grounded");
+        }
+       
     }
 
     void OnTriggerEnter2D(Collider2D col){
@@ -75,5 +85,33 @@ public class PlayerMovement : MonoBehaviour
         float extraHeightTest = 0.05f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center , boxCollider2D.bounds.size, 0f, Vector2.down, extraHeightTest, platformLayerMask | playerLayerMask);
         return raycastHit.collider !=null;
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Tramp" && gc.isGrounded == false)
+        {
+            upSpeed += 100f;
+
+            if (upSpeed >= bounceLimit)
+            {
+                upSpeed = bounceLimit;
+            }
+
+            rb.AddForce(new Vector2(0, upSpeed));
+        }
+        else
+
+        {
+
+            if (col.gameObject.tag == "tramp" == false)
+
+            {
+
+                upSpeed = 0f;
+
+            }
+
+        }
     }
 }
