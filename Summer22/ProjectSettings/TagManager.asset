@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Collectible
   - HeavyButton
+  - Tramp
   layers:
   - Default
   - TransparentFX
