@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
             wh.decrementPlayers();
         }
     }
-
+    //for reverse gravity, need to check opposite direction?
     private bool IsGrounded(){
         float extraHeightTest = 0.05f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center , boxCollider2D.bounds.size, 0f, Vector2.down, extraHeightTest, platformLayerMask | playerLayerMask);
