@@ -855,6 +855,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 845237456}
     m_Modifications:
+    - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1283680239}
+    - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2228728509894812060, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
       propertyPath: m_text
       value: 1-6
@@ -1183,7 +1207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000004706968, y: 1.3859828}
+  m_AnchoredPosition: {x: 0.000004706968, y: 0.000045097186}
   m_SizeDelta: {x: 2528.723, y: 1063}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &967360977
@@ -1470,7 +1494,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1480,6 +1504,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1283680239}
+    - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1120454271613209003, guid: 1a2293012f94f0c429c3bf8e5e6b929c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadSceneByName
@@ -1678,7 +1706,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 349415199}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.6574822
+  m_Size: 0.9991268
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
