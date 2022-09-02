@@ -573,6 +573,17 @@ PrefabInstance:
       objectReference: {fileID: 1679274012}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 288892c6e8930c44390b7fb5d59ff802, type: 3}
+--- !u!114 &708164118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4698503510961144374, guid: 288892c6e8930c44390b7fb5d59ff802, type: 3}
+  m_PrefabInstance: {fileID: 708164117}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b814ede080ea11c4a818d13e3cb00c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &826493917 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1278477875, guid: 66dbdedd15a95b14eb1f8469d8b66b04, type: 3}
@@ -1116,11 +1127,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8106081574118183169, guid: d5d4dffa8baa414479dbf157626850a1, type: 3}
   m_PrefabInstance: {fileID: 952575683}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1245289531
+--- !u!114 &1245289531 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5432724528186624135, guid: d5d4dffa8baa414479dbf157626850a1, type: 3}
+  m_PrefabInstance: {fileID: 952575683}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245289530}
   m_Enabled: 1
@@ -1128,7 +1138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f9e83121f833b4396e99aa75e6fce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrounded: 0
 --- !u!1 &1364243350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,11 +1249,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 771411425315447410, guid: ba8c69da9183eec498a92489a5d1fc2f, type: 3}
   m_PrefabInstance: {fileID: 2006506526}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1679274018
+--- !u!114 &1679274018 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3329834280022298823, guid: ba8c69da9183eec498a92489a5d1fc2f, type: 3}
+  m_PrefabInstance: {fileID: 2006506526}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679274012}
   m_Enabled: 1
@@ -1252,7 +1260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f9e83121f833b4396e99aa75e6fce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrounded: 0
 --- !u!1001 &1681465070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32573,6 +32580,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1538036299631859320, guid: 3f739664a6f45bb47939b1de912de19b, type: 3}
+      propertyPath: playerSwitcher
+      value: 
+      objectReference: {fileID: 708164118}
     - target: {fileID: 3284872070975521613, guid: 3f739664a6f45bb47939b1de912de19b, type: 3}
       propertyPath: m_Name
       value: Main Camera

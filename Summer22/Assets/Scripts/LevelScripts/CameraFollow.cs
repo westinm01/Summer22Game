@@ -10,6 +10,11 @@ public class CameraFollow : MonoBehaviour
 
     private bool isZoomed = false;
 
+    public bool characterLocked;
+
+    public float timeToSwitch = 2f;
+    private float timePassed = 0f;
+
     public PlayerSwitcher playerSwitcher;
 
     // Start is called before the first frame update
@@ -28,13 +33,30 @@ public class CameraFollow : MonoBehaviour
         
         if (isZoomed)
         {
+            timePassed += Time.deltaTime;
+            
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                characterLocked = false;
+                timePassed = 0f;
+            }
+            
             GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, zoom, Time.deltaTime * smooth);
-            transform.position = playerSwitcher.players[playerSwitcher.getPlayerIndex()].transform.position + new Vector3(0, 1, -10);
+
+            if(timePassed < timeToSwitch)
+            {
+                transform.position = Vector3.Lerp(transform.position, playerSwitcher.players[playerSwitcher.getPlayerIndex()].transform.position + new Vector3(0, 1, -10), timePassed/timeToSwitch);
+            }
+            else{
+                transform.position = playerSwitcher.players[playerSwitcher.getPlayerIndex()].transform.position + new Vector3(0, 1, -10);
+            }
+            
         }
         else
         {
             GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, normal, Time.deltaTime * smooth);
-            transform.position = new Vector3(4.56f, 3.4f, -10);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(4.56f, 3.4f, -10), Time.deltaTime * smooth);
+            timePassed = 0f;
         }
 
 

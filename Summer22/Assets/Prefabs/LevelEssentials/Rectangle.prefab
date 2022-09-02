@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 771411425315447408}
   - component: {fileID: 771411425315447409}
   - component: {fileID: 771411425315447413}
+  - component: {fileID: 3329834280022298823}
   m_Layer: 0
   m_Name: Rectangle
   m_TagString: Untagged
@@ -157,3 +158,17 @@ MonoBehaviour:
   wh: {fileID: 0}
   boxCollider2D: {fileID: 771411425315447408}
   isCollecting: 0
+  bounceLimit: 600
+--- !u!114 &3329834280022298823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771411425315447410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f9e83121f833b4396e99aa75e6fce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrounded: 0
