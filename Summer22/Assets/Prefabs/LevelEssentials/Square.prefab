@@ -153,7 +153,7 @@ MonoBehaviour:
     m_Bits: 128
   movementSpeed: 3.5
   jumpPower: 7
-  gc: {fileID: 0}
+  gc: {fileID: 5432724528186624135}
   rb: {fileID: 8106081574118183168}
   wh: {fileID: 0}
   boxCollider2D: {fileID: 8106081574118183175}
