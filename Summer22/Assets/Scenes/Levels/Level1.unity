@@ -959,6 +959,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1196838328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4698503510961144374, guid: 288892c6e8930c44390b7fb5d59ff802, type: 3}
+  m_PrefabInstance: {fileID: 708164117}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b814ede080ea11c4a818d13e3cb00c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1245289530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8106081574118183169, guid: d5d4dffa8baa414479dbf157626850a1, type: 3}
@@ -24927,7 +24938,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -25127,6 +25138,27 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3284872070975521614, guid: 3f739664a6f45bb47939b1de912de19b, type: 3}
   m_PrefabInstance: {fileID: 2021010191}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2028769125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3284872070975521613, guid: 3f739664a6f45bb47939b1de912de19b, type: 3}
+  m_PrefabInstance: {fileID: 2021010191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2028769128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028769125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5db277e399d0a419da762828337b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoom: 5
+  normal: 13.4
+  smooth: 5
+  playerSwitcher: {fileID: 1196838328}
 --- !u!114 &2029439105
 MonoBehaviour:
   m_ObjectHideFlags: 0
