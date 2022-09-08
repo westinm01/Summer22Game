@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    
     public float zoom = 5f;
     public float normal = 13.6293f;
     public float smooth = 5;
 
-    private bool isZoomed = false;
+    public bool isZoomed = false;
 
     public bool characterLocked;
 
@@ -25,10 +26,10 @@ public class CameraFollow : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         if(Input.GetMouseButtonDown(1))
         {
-            isZoomed = !isZoomed;
+            ChangeZoom();
         }
         
         if (isZoomed)
@@ -52,7 +53,7 @@ public class CameraFollow : MonoBehaviour
             }
             
         }
-        else
+        else if(!isZoomed)
         {
             GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, normal, Time.deltaTime * smooth);
             transform.position = Vector3.Lerp(transform.position, new Vector3(4.56f, 3.4f, -10), Time.deltaTime * smooth);
@@ -60,5 +61,10 @@ public class CameraFollow : MonoBehaviour
         }
 
 
+    }
+
+    public void ChangeZoom()
+    {
+        isZoomed = !isZoomed;
     }
 }

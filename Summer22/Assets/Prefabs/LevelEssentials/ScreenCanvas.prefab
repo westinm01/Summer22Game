@@ -638,7 +638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3095778753234905866}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3303416658771259245}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: ReloadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3095778753252584663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,13 +1653,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 3095778752793031248}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2196,3 +2208,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4165063520663989834, guid: d8f61f7f698ac094dbe2b2252a5494ad, type: 3}
   m_PrefabInstance: {fileID: 3482217904528550433}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3303416658771259245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2128871454044243276, guid: d8f61f7f698ac094dbe2b2252a5494ad, type: 3}
+  m_PrefabInstance: {fileID: 3482217904528550433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc7429b3d109d44c8e3455233a2430b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

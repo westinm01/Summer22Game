@@ -23,4 +23,9 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1.0f;
     }
+    public void ReloadScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
 }
