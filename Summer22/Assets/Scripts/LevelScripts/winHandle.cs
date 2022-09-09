@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class winHandle : MonoBehaviour
 {
@@ -14,8 +14,11 @@ public class winHandle : MonoBehaviour
 
     public PauseManager pauseManager;
 
+    public int nextSceneLoad;
+
     void Start(){
         //count how many collectibles are in the scene.
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
     
     public void handleWin()
@@ -42,7 +45,23 @@ public class winHandle : MonoBehaviour
     private void checkWin(){
         if(currentPlayers == playersNeeded && currentCollectibles == collectiblesNeeded)
         {
+            if(SceneManager.GetActiveScene().buildIndex == 9)
+            {
+                Debug.Log("You reached the end of this world");
+            }
+            else
+            {
+                if (nextSceneLoad > PlayerPrefs.GetInt("leveAt"))
+                {
+                    PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+                }
+            }
+
             handleWin();
+
+            
+
+            
         }
     }
 }

@@ -124,11 +124,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersNeeded: 2
-  collectiblesNeeded: 1
+  collectiblesNeeded: 3
   currentPlayers: 0
   currentCollectibles: 0
   collectDisplay: {fileID: 1278477879}
   pauseManager: {fileID: 0}
+  nextSceneLoad: 0
 --- !u!114 &1278477879
 MonoBehaviour:
   m_ObjectHideFlags: 0
