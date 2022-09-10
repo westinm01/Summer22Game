@@ -16,6 +16,9 @@ public class winHandle : MonoBehaviour
 
     public int nextSceneLoad;
 
+
+    
+
     void Start(){
         //count how many collectibles are in the scene.
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
@@ -49,13 +52,16 @@ public class winHandle : MonoBehaviour
             {
                 Debug.Log("You reached the end of this world");
             }
-            else
-            {
+                else 
+                {
                 if (nextSceneLoad > PlayerPrefs.GetInt("leveAt"))
                 {
                     PlayerPrefs.SetInt("levelAt", nextSceneLoad);
                 }
-            }
+                    
+                }
+
+
 
             handleWin();
 
