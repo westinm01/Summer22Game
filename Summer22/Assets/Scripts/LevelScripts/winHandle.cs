@@ -10,6 +10,7 @@ public class winHandle : MonoBehaviour
     public int currentPlayers=0;
     public int currentCollectibles = 0;
 
+
     public CollectDisplay collectDisplay;
 
     public PauseManager pauseManager;
@@ -48,7 +49,14 @@ public class winHandle : MonoBehaviour
     private void checkWin(){
         if(currentPlayers == playersNeeded && currentCollectibles == collectiblesNeeded)
         {
-            if(SceneManager.GetActiveScene().buildIndex == 9)
+
+            if (PlayerPrefs.GetInt("leveAt") > PlayerPrefs.GetInt("max"))
+            {
+                PlayerPrefs.SetInt("max",  + 1);
+
+            }
+         
+            if (SceneManager.GetActiveScene().buildIndex == 9)
             {
                 Debug.Log("You reached the end of this world");
             }
@@ -56,8 +64,11 @@ public class winHandle : MonoBehaviour
                 {
                 if (nextSceneLoad > PlayerPrefs.GetInt("leveAt"))
                 {
-                    PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+                    
+                        PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+                    
                 }
+        
                     
                 }
 

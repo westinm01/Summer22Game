@@ -6,15 +6,19 @@ using UnityEngine.UI;
 public class SceneLoader : MonoBehaviour
 {
     public Button[] lvlButtons;
+    
+    
 
     public void Start()
     {
-        int levelAt = PlayerPrefs.GetInt("levelAt", 1);
+        int levelAt = PlayerPrefs.GetInt("levelAt", 2);
+        int max = PlayerPrefs.GetInt("max", 1);
 
         for (int i = 0; i < lvlButtons.Length; i++)
         {
-
-            if (i + 2 > levelAt)
+       
+            Debug.Log(max);
+            if (i + 3 > max)
                 lvlButtons[i].interactable = false;
         }
         

@@ -65067,5 +65067,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3303416658771259245, guid: b5e70dc1a5d6367438b17180b9db5566, type: 3}
+      propertyPath: lvlButtons.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5e70dc1a5d6367438b17180b9db5566, type: 3}
