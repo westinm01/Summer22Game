@@ -11,14 +11,14 @@ public class SceneLoader : MonoBehaviour
 
     public void Start()
     {
-        int levelAt = PlayerPrefs.GetInt("levelAt", 2);
-        int max = PlayerPrefs.GetInt("max", 1);
+        int levelAt = PlayerPrefs.GetInt("levelAt");
+        int max = PlayerPrefs.GetInt("max");
 
         for (int i = 0; i < lvlButtons.Length; i++)
         {
        
-            Debug.Log(max);
-            if (i + 3 > max)
+            Debug.Log(PlayerPrefs.GetInt("max"));
+            if (i + 4 > PlayerPrefs.GetInt("max"))
                 lvlButtons[i].interactable = false;
         }
         

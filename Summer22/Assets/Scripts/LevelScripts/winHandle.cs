@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class winHandle : MonoBehaviour
 {
-    public int playersNeeded=0;
+    public int playersNeeded = 0;
     public int collectiblesNeeded = 1;
-    public int currentPlayers=0;
+    public int currentPlayers = 0;
     public int currentCollectibles = 0;
 
 
@@ -15,14 +15,22 @@ public class winHandle : MonoBehaviour
 
     public PauseManager pauseManager;
 
-    public int nextSceneLoad;
-
-
     
+
+    public int currentScene;
+
+    public int keepTrackOfLevel;
+
 
     void Start(){
         //count how many collectibles are in the scene.
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        //nextSceneLoad = SceneManager.GetActiveScene().buildIndex;
+        
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+        keepTrackOfLevel = currentScene;
+
+         PlayerPrefs.GetInt("levelAt", currentScene + 1);
+         PlayerPrefs.GetInt("max", keepTrackOfLevel);
     }
     
     public void handleWin()
@@ -50,28 +58,39 @@ public class winHandle : MonoBehaviour
         if(currentPlayers == playersNeeded && currentCollectibles == collectiblesNeeded)
         {
 
-            if (PlayerPrefs.GetInt("leveAt") > PlayerPrefs.GetInt("max"))
-            {
-                PlayerPrefs.SetInt("max",  + 1);
+            Debug.Log(keepTrackOfLevel);
 
-            }
-         
-            if (SceneManager.GetActiveScene().buildIndex == 9)
+            if(keepTrackOfLevel < currentScene)
             {
-                Debug.Log("You reached the end of this world");
+                currentScene = keepTrackOfLevel - 1;
+                print(":" + currentScene);
             }
-                else 
+            else
+            {
+                if (PlayerPrefs.GetInt("leveAt") > PlayerPrefs.GetInt("max"))
                 {
-                if (nextSceneLoad > PlayerPrefs.GetInt("leveAt"))
-                {
-                    
-                        PlayerPrefs.SetInt("levelAt", nextSceneLoad);
-                    
-                }
-        
-                    
+                    PlayerPrefs.SetInt("max", keepTrackOfLevel);
+
                 }
 
+                if (SceneManager.GetActiveScene().buildIndex == 9)
+                {
+                    Debug.Log("You reached the end of this world");
+                }
+                else
+                {
+                    if (keepTrackOfLevel > PlayerPrefs.GetInt("leveAt"))
+                    {
+
+                        PlayerPrefs.SetInt("levelAt", PlayerPrefs.GetInt("max"));
+
+                    }
+
+
+                }
+            }
+          
+           
 
 
             handleWin();
