@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: pauseManager
       value: 
       objectReference: {fileID: 49469080}
+    - target: {fileID: 1278477875, guid: 66dbdedd15a95b14eb1f8469d8b66b04, type: 3}
+      propertyPath: lvlButtons.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1278477879, guid: 66dbdedd15a95b14eb1f8469d8b66b04, type: 3}
       propertyPath: tmp
       value: 

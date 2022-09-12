@@ -729,6 +729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 2128871454044243276, guid: d8f61f7f698ac094dbe2b2252a5494ad, type: 3}
+      propertyPath: lvlButtons.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4165063520663989834, guid: d8f61f7f698ac094dbe2b2252a5494ad, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class winHandle : MonoBehaviour
 {
     public int playersNeeded = 0;
     public int collectiblesNeeded = 1;
     public int currentPlayers = 0;
     public int currentCollectibles = 0;
+
+    
 
 
     public CollectDisplay collectDisplay;
@@ -17,25 +19,29 @@ public class winHandle : MonoBehaviour
 
     
 
-    public int currentScene;
+   // public int currentScene;
 
-    public int keepTrackOfLevel;
+   // public int keepTrackOfLevel;
+
+    public int nextSceneload;
 
 
     void Start(){
         //count how many collectibles are in the scene.
-        //nextSceneLoad = SceneManager.GetActiveScene().buildIndex;
+        int levelAt = PlayerPrefs.GetInt("levelAt", 2);
+        int max = PlayerPrefs.GetInt("max", 0);
+        nextSceneload = SceneManager.GetActiveScene().buildIndex + 1;
         
-        currentScene = SceneManager.GetActiveScene().buildIndex;
-        keepTrackOfLevel = currentScene;
+       // currentScene = SceneManager.GetActiveScene().buildIndex;
+       // nextSceneLoad = currentScene;
 
-         PlayerPrefs.GetInt("levelAt", currentScene + 1);
-         PlayerPrefs.GetInt("max", keepTrackOfLevel);
+     //    PlayerPrefs.GetInt("levelAt", currentScene + 1);
+      //   PlayerPrefs.GetInt("max", nextSceneLoad);
     }
     
     public void handleWin()
     {
-        //SceneManager.LoadScene("Main Menu"); //instead, should go to win screen!
+        //SceneManager.LoadScene(""); //instead, should go to win screen!
         pauseManager.Pause(1); //pause game and load up win screen
     }
 
@@ -58,46 +64,54 @@ public class winHandle : MonoBehaviour
         if(currentPlayers == playersNeeded && currentCollectibles == collectiblesNeeded)
         {
 
-            Debug.Log(keepTrackOfLevel);
+            // Debug.Log(nextSceneLoad);
 
-            if(keepTrackOfLevel < currentScene)
-            {
-                currentScene = keepTrackOfLevel - 1;
-                print(":" + currentScene);
-            }
-            else
-            {
-                if (PlayerPrefs.GetInt("leveAt") > PlayerPrefs.GetInt("max"))
-                {
-                    PlayerPrefs.SetInt("max", keepTrackOfLevel);
+           
 
-                }
-
-                if (SceneManager.GetActiveScene().buildIndex == 9)
+            if (SceneManager.GetActiveScene().buildIndex == 14)
                 {
                     Debug.Log("You reached the end of this world");
                 }
                 else
                 {
-                    if (keepTrackOfLevel > PlayerPrefs.GetInt("leveAt"))
+                Debug.Log("Current levelAt Value: " + PlayerPrefs.GetInt("levelAt"));
+
+                Debug.Log("Current Max Value: " + PlayerPrefs.GetInt("max"));
+
+                Debug.Log("Current nextSceneLoad Value: " + nextSceneload);
+
+                if (nextSceneload >= PlayerPrefs.GetInt("levelAt"))
                     {
 
-                        PlayerPrefs.SetInt("levelAt", PlayerPrefs.GetInt("max"));
+                    Debug.Log(PlayerPrefs.GetInt("levelAt"));
 
+                    PlayerPrefs.SetInt("levelAt", nextSceneload);
+                    //nextSceneload++;
+
+                    Debug.Log(PlayerPrefs.GetInt("levelAt"));
+
+                    //**********************************************************
+
+                    
+
+                    Debug.Log(PlayerPrefs.GetInt("max"));
+
+                    if (PlayerPrefs.GetInt("levelAt") > PlayerPrefs.GetInt("max"))
+
+                    { 
+                        PlayerPrefs.SetInt("max", PlayerPrefs.GetInt("levelAt")); 
                     }
 
+                    Debug.Log(PlayerPrefs.GetInt("max"));
+
+                   
 
                 }
+
             }
-          
-           
-
-
+        
             handleWin();
-
-            
-
-            
+ 
         }
     }
 }
