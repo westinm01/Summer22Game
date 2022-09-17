@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
 
     float upSpeed;
     public float bounceLimit = 600;
+
+    public bool isButtonPressed = false;
+    public float buttonDirection = 1f;
     
     void Start()
     {
@@ -37,8 +40,11 @@ public class PlayerMovement : MonoBehaviour
 
 
         float dirX = Input.GetAxisRaw("Horizontal");
+        if(isButtonPressed)
+        {
+            dirX = buttonDirection;
+        }
         rb.velocity = new Vector2(dirX * movementSpeed, rb.velocity.y);
-
         
         if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
         {
@@ -114,4 +120,10 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+    public void ButtonMoveEvent(bool isButtonPressed, float direction)
+    {
+        this.isButtonPressed = isButtonPressed;
+        this.buttonDirection = direction;
+    }
+
 }
