@@ -36,7 +36,7 @@ public class CameraFollow : MonoBehaviour
         {
             timePassed += Time.deltaTime;
             
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.Space) || PlayerSwitcher.uIPressed)
             {
                 characterLocked = false;
                 timePassed = 0f;

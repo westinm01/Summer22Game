@@ -9,6 +9,7 @@ public class PlayerSwitcher : MonoBehaviour
     public List<GameObject> players;
     private int playerIndex = 0;
     public Image currentPlayerDisplay;
+    public static bool uIPressed = false;
     
     void Start()
     {
@@ -28,8 +29,9 @@ public class PlayerSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || uIPressed)
         {
+            
             //disable current player
             players[playerIndex].GetComponent<PlayerMovement>().enabled = false;
             players[playerIndex].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
@@ -50,6 +52,7 @@ public class PlayerSwitcher : MonoBehaviour
             players[playerIndex].layer = LayerMask.NameToLayer("CurrentPlayer");
             
             updateCurrentPlayerDisplay();
+            uIPressed = false;
         }
     }
 
@@ -64,5 +67,10 @@ public class PlayerSwitcher : MonoBehaviour
         currentPlayerDisplay.sprite = currentSR.sprite;
         currentPlayerDisplay.color = currentSR.color;
         currentPlayerDisplay.gameObject.transform.localScale = currentSR.gameObject.transform.localScale;
+    }
+
+    public void SetUIPressed(bool newVal)
+    {
+        uIPressed = newVal;
     }
 }

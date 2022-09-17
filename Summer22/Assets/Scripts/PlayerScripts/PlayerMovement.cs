@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isButtonPressed = false;
     public float buttonDirection = 1f;
+    public bool jumpButtonPressed = false;
     
     void Start()
     {
@@ -46,9 +47,9 @@ public class PlayerMovement : MonoBehaviour
         }
         rb.velocity = new Vector2(dirX * movementSpeed, rb.velocity.y);
         
-        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || jumpButtonPressed) && IsGrounded())
         {
-            
+            jumpButtonPressed = false;
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             
         }
@@ -124,6 +125,15 @@ public class PlayerMovement : MonoBehaviour
     {
         this.isButtonPressed = isButtonPressed;
         this.buttonDirection = direction;
+    }
+
+    public void SetJumpButtonPressed(bool newVal)
+    {
+        if(this.enabled)
+        {
+            jumpButtonPressed = newVal;
+        }
+        
     }
 
 }
