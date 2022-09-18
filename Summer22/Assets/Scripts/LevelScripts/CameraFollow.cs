@@ -36,10 +36,11 @@ public class CameraFollow : MonoBehaviour
         {
             timePassed += Time.deltaTime;
             
-            if(Input.GetKeyDown(KeyCode.Space) || PlayerSwitcher.uIPressed)
+            if(Input.GetKeyDown(KeyCode.Space) || playerSwitcher.cameraSwitch)
             {
                 characterLocked = false;
                 timePassed = 0f;
+                playerSwitcher.cameraSwitch = false;
             }
             
             GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, zoom, Time.deltaTime * smooth);

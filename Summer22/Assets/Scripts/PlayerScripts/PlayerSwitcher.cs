@@ -9,7 +9,9 @@ public class PlayerSwitcher : MonoBehaviour
     public List<GameObject> players;
     private int playerIndex = 0;
     public Image currentPlayerDisplay;
-    public static bool uIPressed = false;
+    public bool uIPressed = false;
+
+    public bool cameraSwitch = false;
     
     void Start()
     {
@@ -53,6 +55,7 @@ public class PlayerSwitcher : MonoBehaviour
             
             updateCurrentPlayerDisplay();
             uIPressed = false;
+            cameraSwitch = true;
         }
     }
 
@@ -72,5 +75,9 @@ public class PlayerSwitcher : MonoBehaviour
     public void SetUIPressed(bool newVal)
     {
         uIPressed = newVal;
+    }
+    public bool GetUIPressed()
+    {
+        return uIPressed;
     }
 }
