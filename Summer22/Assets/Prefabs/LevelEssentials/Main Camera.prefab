@@ -96,9 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5db277e399d0a419da762828337b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoom: 5
+  zoom: 2
   normal: 13.4
   smooth: 5
+  isZoomed: 0
   characterLocked: 0
   timeToSwitch: 1
   playerSwitcher: {fileID: 0}

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8106081574118183168}
   - component: {fileID: 8106081574118183172}
   - component: {fileID: 5432724528186624135}
+  - component: {fileID: 8448718254482611096}
   m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.161767, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: -5961909803557476638, guid: 5aed3670f210b0340a64b25d42897342, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,18 +100,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0033359528, y: 0}
+  m_Offset: {x: -0.0035028458, y: -0.052194595}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.45333335, y: 1.2666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9666405, y: 0.95996857}
+  m_Size: {x: 0.46969986, y: 0.9640579}
   m_EdgeRadius: 0
 --- !u!50 &8106081574118183168
 Rigidbody2D:
@@ -159,6 +160,10 @@ MonoBehaviour:
   boxCollider2D: {fileID: 8106081574118183175}
   isCollecting: 0
   bounceLimit: 600
+  isButtonPressed: 0
+  buttonDirection: 1
+  jumpButtonPressed: 0
+  height: 1
 --- !u!114 &5432724528186624135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +177,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
+--- !u!95 &8448718254482611096
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106081574118183169}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8f813fb326b3c641b996733f991b9f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

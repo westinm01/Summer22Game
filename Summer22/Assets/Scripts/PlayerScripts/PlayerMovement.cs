@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     public float buttonDirection = 1f;
     public bool jumpButtonPressed = false;
     
+    public int height = 1;
     void Start()
     {
         
@@ -72,9 +73,9 @@ public class PlayerMovement : MonoBehaviour
         else if (col.gameObject.tag == "HeavyButton")
         {
             HeavyButton hb = col.gameObject.GetComponent<HeavyButton>();
-            if(hb.requiredHeight <= this.transform.localScale.y)
+            if(hb.requiredHeight <= this.height)
             {
-                Debug.Log(this.transform.localScale.y);
+                Debug.Log(this.height);
                 hb.actions.Invoke();
                 hb.Disappear();
             }

@@ -47,10 +47,10 @@ public class CameraFollow : MonoBehaviour
 
             if(timePassed < timeToSwitch)
             {
-                transform.position = Vector3.Lerp(transform.position, playerSwitcher.players[playerSwitcher.getPlayerIndex()].transform.position + new Vector3(0, 1, -10), timePassed/timeToSwitch);
+                transform.position = Vector3.Lerp(transform.position, playerSwitcher.players[playerSwitcher.getPlayerIndex()].transform.position + new Vector3(0, 0, -10), timePassed/timeToSwitch);
             }
             else{
-                transform.position = playerSwitcher.players[playerSwitcher.getPlayerIndex()].transform.position + new Vector3(0, 1, -10);
+                transform.position = playerSwitcher.players[playerSwitcher.getPlayerIndex()].transform.position + new Vector3(0, 0, -10);
             }
             
         }
