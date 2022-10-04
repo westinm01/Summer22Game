@@ -45,3 +45,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: clouds
+    uniqueID: 2041828731
+    locked: 0

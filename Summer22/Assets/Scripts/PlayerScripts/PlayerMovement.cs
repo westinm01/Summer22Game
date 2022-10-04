@@ -67,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
             wh.incrementPlayers();
         }
         else if (col.gameObject.tag == "Collectible"){
+            //col.GetComponent<AudioSource>().Play();
+            //TODO: Make coin audio play. Can't be audio source on collectable.
             wh.incrementCollectibles();
             Destroy(col.gameObject);
         }
