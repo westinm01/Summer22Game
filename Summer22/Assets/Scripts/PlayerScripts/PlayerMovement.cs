@@ -30,10 +30,11 @@ public class PlayerMovement : MonoBehaviour
     public float buttonDirection = 1f;
     public bool jumpButtonPressed = false;
     
+    public Animator playerAnimator;
     public int height = 1;
     void Start()
     {
-        
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -47,7 +48,12 @@ public class PlayerMovement : MonoBehaviour
             dirX = buttonDirection;
         }
         rb.velocity = new Vector2(dirX * movementSpeed, rb.velocity.y);
-        
+        bool movingLR = dirX != 0;
+        playerAnimator.SetBool("isWalking", movingLR);
+        if (movingLR)
+        {
+            GetComponent<SpriteRenderer>().flipX = dirX > 0;
+        }
         if ((Input.GetKeyDown(KeyCode.UpArrow) || jumpButtonPressed) && IsGrounded())
         {
             jumpButtonPressed = false;
