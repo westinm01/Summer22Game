@@ -33,9 +33,11 @@ public class PlayerMovement : MonoBehaviour
     
     public Animator playerAnimator;
     public int height = 1;
+    private CameraFollow camFol;
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
+        camFol = FindObjectOfType<CameraFollow>();
     }
 
     // Update is called once per frame
@@ -47,18 +49,23 @@ public class PlayerMovement : MonoBehaviour
         if(isButtonPressed)
         {
             dirX = buttonDirection;
+            
+            
         }
         rb.velocity = new Vector2(dirX * movementSpeed, rb.velocity.y);
         bool movingLR = dirX != 0;
+        
         playerAnimator.SetBool("isWalking", movingLR);
         if (movingLR)
         {
             GetComponent<SpriteRenderer>().flipX = dirX > 0;
+            camFol.isZoomed = true;
         }
         if ((Input.GetKeyDown(KeyCode.UpArrow) || jumpButtonPressed) && IsGrounded())
         {
             jumpButtonPressed = false;
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            camFol.isZoomed = true;
             
         }
         if (gc.isGrounded)

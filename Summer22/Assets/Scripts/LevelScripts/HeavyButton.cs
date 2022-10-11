@@ -46,6 +46,8 @@ public class HeavyButton : MonoBehaviour
             if(pressCheck)
             {
                 pressSound.Play();
+                CameraFollow camFol = FindObjectOfType<CameraFollow>();
+                camFol.isZoomed = false;
             }
             pressCheck=false;
             timer+= Time.deltaTime;
