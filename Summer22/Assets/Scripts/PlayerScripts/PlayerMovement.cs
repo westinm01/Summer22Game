@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -64,7 +65,10 @@ public class PlayerMovement : MonoBehaviour
         {
             upSpeed = 0f;
             print("Grounded");
+            
         }
+        playerAnimator.SetBool("isGrounded", IsGrounded());
+        
        
     }
 
