@@ -9,12 +9,14 @@ public class SceneLoader : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+
+        //IF YOU WANT TO RESTART YOUR LEVEL PROGRESSION UNCOMMENT THIS AND PRESS R AT THE LEVEL SELECTION SCREEN AND ENTER A LEVEL AND COME BACK TO LEVEL SELECTION PROGRESS SHOULD BE RESET
+        /*if (Input.GetKeyDown(KeyCode.R))
         {
             PlayerPrefs.SetInt("max", 2);
             PlayerPrefs.SetInt("levelAt", 2);
 
-        }
+        }*/
     }
 
 

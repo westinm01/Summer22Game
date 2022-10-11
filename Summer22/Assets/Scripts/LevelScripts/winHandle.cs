@@ -68,7 +68,7 @@ public class winHandle : MonoBehaviour
 
            
 
-            if (SceneManager.GetActiveScene().buildIndex == 14)
+            if (SceneManager.GetActiveScene().buildIndex == 21)
                 {
                     Debug.Log("You reached the end of this world");
                 }
