@@ -36,6 +36,8 @@ public class PlayerSwitcher : MonoBehaviour
             
             //disable current player
             players[playerIndex].GetComponent<PlayerMovement>().enabled = false;
+            players[playerIndex].GetComponent<Animator>().SetBool("isWalking", false);
+            players[playerIndex].GetComponent<Animator>().SetBool("isGrounded", true);
             players[playerIndex].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             players[playerIndex].layer = LayerMask.NameToLayer("Player");
 
