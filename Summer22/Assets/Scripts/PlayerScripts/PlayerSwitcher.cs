@@ -71,7 +71,6 @@ public class PlayerSwitcher : MonoBehaviour
         SpriteRenderer currentSR =players[playerIndex].GetComponent<SpriteRenderer>();
         currentPlayerDisplay.sprite = currentSR.sprite;
         currentPlayerDisplay.color = currentSR.color;
-        currentPlayerDisplay.gameObject.transform.localScale = currentSR.gameObject.transform.localScale;
     }
 
     public void SetUIPressed(bool newVal)
