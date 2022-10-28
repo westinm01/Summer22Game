@@ -66428,6 +66428,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3303416658771259245, guid: b5e70dc1a5d6367438b17180b9db5566, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1783652951402547118, guid: 0952f80083d0649498841c00647d5370, type: 3}
+    - target: {fileID: 3303416658771259245, guid: b5e70dc1a5d6367438b17180b9db5566, type: 3}
       propertyPath: lvlButtons.Array.size
       value: 0
       objectReference: {fileID: 0}
