@@ -1424,10 +1424,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1196838328}
-    - target: {fileID: 6975188902735326036, guid: 58cb0286c18a1bb45891f40009425826, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetUIPressed
-      objectReference: {fileID: 0}
     - target: {fileID: 7686092362196624947, guid: 58cb0286c18a1bb45891f40009425826, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1436,10 +1432,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2006506527}
-    - target: {fileID: 8283169072360164172, guid: 58cb0286c18a1bb45891f40009425826, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8283169072360164175, guid: 58cb0286c18a1bb45891f40009425826, type: 3}
       propertyPath: m_Name
       value: Canvas
