@@ -16,7 +16,7 @@ public class winHandle : MonoBehaviour
     public CollectDisplay collectDisplay;
 
     public PauseManager pauseManager;
-
+    public AudioClip winAudio;
     
 
    // public int currentScene;
@@ -43,6 +43,10 @@ public class winHandle : MonoBehaviour
     {
         //SceneManager.LoadScene(""); //instead, should go to win screen!
         pauseManager.Pause(1); //pause game and load up win screen
+        AudioSource a = FindObjectOfType<BackgroundChange>().gameObject.GetComponent<AudioSource>();
+        a.clip = winAudio;
+        a.Play();
+        a.loop = false;
     }
 
     public void incrementPlayers(){

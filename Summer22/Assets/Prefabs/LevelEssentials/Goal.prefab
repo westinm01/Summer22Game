@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.19, y: 4.81, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -45,6 +46,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -124,12 +126,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersNeeded: 2
-  collectiblesNeeded: 3
+  collectiblesNeeded: 45
   currentPlayers: 0
   currentCollectibles: 0
   collectDisplay: {fileID: 1278477879}
   pauseManager: {fileID: 0}
-  nextSceneLoad: 0
+  winAudio: {fileID: 8300000, guid: 973e554c71e1cee43acd93f847488c6d, type: 3}
+  nextSceneload: 0
 --- !u!114 &1278477879
 MonoBehaviour:
   m_ObjectHideFlags: 0
