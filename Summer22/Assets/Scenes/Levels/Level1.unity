@@ -2017,7 +2017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You need both characters to enter this door.
+  m_text: You need both characters and all coins to enter this door.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d500010a9b69cc941b495b1c8479ead0, type: 2}
   m_sharedMaterial: {fileID: -3971974340707204377, guid: d500010a9b69cc941b495b1c8479ead0, type: 2}

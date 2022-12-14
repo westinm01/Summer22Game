@@ -1174,7 +1174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 18}
+  m_AnchoredPosition: {x: 0, y: 23.4}
   m_SizeDelta: {x: 110.8551, y: 77.7664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8283169072905625909
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: POINTS REMAINING
+  m_text: COINS  REMAINING
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d500010a9b69cc941b495b1c8479ead0, type: 2}
   m_sharedMaterial: {fileID: -3971974340707204377, guid: d500010a9b69cc941b495b1c8479ead0, type: 2}
