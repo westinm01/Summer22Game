@@ -149,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetJumpButtonPressed(bool newVal)
     {
-        if(this.enabled)
+        if(this.enabled && IsGrounded())
         {
             jumpButtonPressed = newVal;
         }
