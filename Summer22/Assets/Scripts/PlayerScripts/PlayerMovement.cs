@@ -156,4 +156,13 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    public void SetIsButtonPressed(bool newVal)
+    {
+        isButtonPressed = newVal;
+    }
+    public void SetButtonDirection(float dir)
+    {
+        buttonDirection = dir;
+    }
+
 }
