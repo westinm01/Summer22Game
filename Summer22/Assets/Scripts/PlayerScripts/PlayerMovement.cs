@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<SpriteRenderer>().flipX = dirX > 0;
             camFol.isZoomed = true;
         }
-        if ((Input.GetKeyDown(KeyCode.UpArrow) || jumpButtonPressed) && IsGrounded())
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || jumpButtonPressed || Input.GetKeyDown(KeyCode.W)) && IsGrounded())
         {
             jumpButtonPressed = false;
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
